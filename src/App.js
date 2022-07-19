@@ -1,30 +1,10 @@
-// import template from './template.html'
-import contacts from "./data.json";
+import Comments from './components/Comments';
+import Heading from './components/Heading'
+import Hr from './components/Hr';
+import NewComment from './components/NewComment'
 
-const element = document.createElement("div");
-element.innerHTML = 'Hello World';
-
-const contactList = document.createElement("div");
-
-contactList.className = "contact-list";
-
-
-
-contacts.forEach((entry) => {
-  const element = document.createElement("div");
-  element.className = "contact";
-
-  // element.innerHTML = template;
-  const name = document.createElement('h2')
-  const phone = document.createElement('p')
-  element.appendChild(name)
-  element.appendChild(phone)
-
-  element.querySelector("h2").innerHTML = entry.name;
-  element.querySelector("p").innerHTML = entry.phone;
-
-  contactList.appendChild(element);
-});
-const _App = document.body.appendChild(contactList);
+const _App = document.body.appendChild(Heading);
+document.body.appendChild(NewComment);
+document.body.appendChild(Comments);
 
 export default _App;
